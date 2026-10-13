@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const Product = require('./models/product.model.js');
 const productRoutes = require('./routes/product.route.js');
+const bookRoutes = require('./routes/book.route');
 
 
 const app = express()
@@ -11,7 +12,7 @@ app.use(express.urlencoded({ extended: false }))
 
 //routes
 app.use('/api/products', productRoutes)
-
+app.use('/api/books', bookRoutes)
 
 
 app.listen(3000, () => {
@@ -101,7 +102,7 @@ app.get('/', (req, res) => {
  
 
 
-mongoose.connect("mongodb+srv://mahermohammed1097_db_user:lNL4kf5Fl0wOFClo@cluster0.bk5dhmp.mongodb.net/?appName=Cluster0")
+mongoose.connect("mongodb+srv://skymakesgfx_db_user:KEa1bXiL2DcZUU3b@cluster0.xx2nqwy.mongodb.net/")
 .then(() => {
   console.log('Connected to MongoDB')
 })

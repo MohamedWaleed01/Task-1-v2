@@ -1,0 +1,13 @@
+$kind: http-request
+name: ""
+url: http://localhost:3000/api/books
+method: GET
+body:
+  type: json
+  content: |-
+    {
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "totalCopies": 5
+    }
+order: 1000
